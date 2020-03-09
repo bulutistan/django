@@ -31,9 +31,13 @@ class View:
     """
     Intentionally simple parent class for all views. Only implements
     dispatch-by-method and simple sanity checking.
+    Added: 'purge', 'lock', 'unlock', 'link', 'unlink', 'propfind', 'view' for rest_framework
     """
 
-    http_method_names = ['get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace']
+    http_method_names = [
+        'get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace',
+        'purge', 'lock', 'unlock', 'link', 'unlink', 'propfind', 'view'
+    ]
 
     def __init__(self, **kwargs):
         """
